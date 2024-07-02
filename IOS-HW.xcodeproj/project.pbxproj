@@ -13,9 +13,6 @@
 		FCC707C72C2C5E5100F3E42B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC707C52C2C5E5100F3E42B /* Main.storyboard */; };
 		FCC707C92C2C5E5100F3E42B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCC707C82C2C5E5100F3E42B /* Assets.xcassets */; };
 		FCC707CC2C2C5E5100F3E42B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCC707CA2C2C5E5100F3E42B /* LaunchScreen.storyboard */; };
-		FCC707D72C2C5E5100F3E42B /* IOS_HWTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC707D62C2C5E5100F3E42B /* IOS_HWTests.swift */; };
-		FCC707E12C2C5E5100F3E42B /* IOS_HWUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC707E02C2C5E5100F3E42B /* IOS_HWUITests.swift */; };
-		FCC707E32C2C5E5100F3E42B /* IOS_HWUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC707E22C2C5E5100F3E42B /* IOS_HWUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,10 +42,7 @@
 		FCC707CB2C2C5E5100F3E42B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCC707CD2C2C5E5100F3E42B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FCC707D22C2C5E5100F3E42B /* IOS-HWTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IOS-HWTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCC707D62C2C5E5100F3E42B /* IOS_HWTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_HWTests.swift; sourceTree = "<group>"; };
 		FCC707DC2C2C5E5100F3E42B /* IOS-HWUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "IOS-HWUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCC707E02C2C5E5100F3E42B /* IOS_HWUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_HWUITests.swift; sourceTree = "<group>"; };
-		FCC707E22C2C5E5100F3E42B /* IOS_HWUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOS_HWUITestsLaunchTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,8 +74,6 @@
 			isa = PBXGroup;
 			children = (
 				FCC707BE2C2C5E5000F3E42B /* IOS-HW */,
-				FCC707D52C2C5E5100F3E42B /* IOS-HWTests */,
-				FCC707DF2C2C5E5100F3E42B /* IOS-HWUITests */,
 				FCC707BD2C2C5E5000F3E42B /* Products */,
 			);
 			sourceTree = "<group>";
@@ -108,23 +100,6 @@
 				FCC707CD2C2C5E5100F3E42B /* Info.plist */,
 			);
 			path = "IOS-HW";
-			sourceTree = "<group>";
-		};
-		FCC707D52C2C5E5100F3E42B /* IOS-HWTests */ = {
-			isa = PBXGroup;
-			children = (
-				FCC707D62C2C5E5100F3E42B /* IOS_HWTests.swift */,
-			);
-			path = "IOS-HWTests";
-			sourceTree = "<group>";
-		};
-		FCC707DF2C2C5E5100F3E42B /* IOS-HWUITests */ = {
-			isa = PBXGroup;
-			children = (
-				FCC707E02C2C5E5100F3E42B /* IOS_HWUITests.swift */,
-				FCC707E22C2C5E5100F3E42B /* IOS_HWUITestsLaunchTests.swift */,
-			);
-			path = "IOS-HWUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,7 +243,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC707D72C2C5E5100F3E42B /* IOS_HWTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,8 +250,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCC707E12C2C5E5100F3E42B /* IOS_HWUITests.swift in Sources */,
-				FCC707E32C2C5E5100F3E42B /* IOS_HWUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
