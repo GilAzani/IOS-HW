@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC47EE552C46C9A5005C50C7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47EE542C46C9A5005C50C7 /* MenuController.swift */; };
 		FCC707C02C2C5E5100F3E42B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC707BF2C2C5E5100F3E42B /* AppDelegate.swift */; };
 		FCC707C22C2C5E5100F3E42B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC707C12C2C5E5100F3E42B /* SceneDelegate.swift */; };
 		FCC707C42C2C5E5100F3E42B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC707C32C2C5E5100F3E42B /* ViewController.swift */; };
@@ -33,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FC47EE542C46C9A5005C50C7 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		FCC707BC2C2C5E5000F3E42B /* IOS-HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC707BF2C2C5E5100F3E42B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCC707C12C2C5E5100F3E42B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 				FCC707C82C2C5E5100F3E42B /* Assets.xcassets */,
 				FCC707CA2C2C5E5100F3E42B /* LaunchScreen.storyboard */,
 				FCC707CD2C2C5E5100F3E42B /* Info.plist */,
+				FC47EE542C46C9A5005C50C7 /* MenuController.swift */,
 			);
 			path = "IOS-HW";
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC47EE552C46C9A5005C50C7 /* MenuController.swift in Sources */,
 				FCC707C42C2C5E5100F3E42B /* ViewController.swift in Sources */,
 				FCC707C02C2C5E5100F3E42B /* AppDelegate.swift in Sources */,
 				FCC707C22C2C5E5100F3E42B /* SceneDelegate.swift in Sources */,
@@ -411,6 +415,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "IOS-HW/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To determine east or side";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -439,6 +444,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "IOS-HW/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "To determine east or side";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
