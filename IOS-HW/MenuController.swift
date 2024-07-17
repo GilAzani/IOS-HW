@@ -16,11 +16,14 @@ class MenuController: UIViewController{
     @IBOutlet weak var westOrEastLabel: UILabel!
     @IBOutlet weak var globeLastLine: UILabel!
     
+    @IBOutlet weak var locationErromLabel: UILabel!
     @IBOutlet weak var startGameButton: UIButton!
     
     private var isSetName = false
     private var isSetLocation = false
     private let middlePosition = 34.817549168324334
+    private var userLocation = GlobeSide.West // default location
+    private var userName = "user" // default userName
     
     private var locationManager: CLLocationManager!
     
@@ -58,6 +61,7 @@ class MenuController: UIViewController{
         globeLastLine.isHidden = true
         westOrEastLabel.isHidden = true
         startGameButton.isHidden = true
+        locationErromLabel.isHidden = true
     }
     
     func nameEntered(name: String){
@@ -80,7 +84,27 @@ class MenuController: UIViewController{
             nameEntered(name:name)
         }
     }
-    @IBAction func startGameClicked(_ sender: Any) {
+//    @IBAction func startGameClicked(_ sender: Any) {
+//        let storyboard = UIStoryboard(name: "MenuController", bundle: nil)
+//        let userData = UserData(userName: userName, globeSide: userLocation)
+//        let gameController = GameController()
+//
+//        if let gameController = storyboard.instantiateViewController(withIdentifier: "gameController") as? gameController{
+//            gameController.userData = userData
+//            navigationController?.pushViewController(gameController, animated: true)
+//        }
+//    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "startGame"{
+            let gameController = segue.destination as! GameController
+            gameController.userData = UserData(userName: userName, globeSide: userLocation)
+        }
+    }
+    
+    func handleErrorLocation(){
+        locationErromLabel.isHidden = false
+        locationRetrived(longitude: middlePosition - 1) //set default location as west
     }
     
 }
@@ -96,6 +120,6 @@ extension MenuController: CLLocationManagerDelegate{
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print("Error location=\(error)")
+        handleErrorLocation()
     }
 }

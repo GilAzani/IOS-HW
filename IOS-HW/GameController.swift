@@ -7,11 +7,15 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class GameController: UIViewController {
+    
+    var userData: UserData?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        print(userData?.globeSide)
     }
 
 
