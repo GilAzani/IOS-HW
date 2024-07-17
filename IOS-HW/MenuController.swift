@@ -66,6 +66,7 @@ class MenuController: UIViewController{
     
     func nameEntered(name: String){
         isSetName = true
+        userName = name
         enterNameTitle.text = "Hi \(name)!"
         enterNameTextField.isHidden = true
         enterNameButton.isHidden = true

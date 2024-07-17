@@ -86,6 +86,15 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="yql-F9-pQm"/>
                     <navigationItem key="navigationItem" id="qsg-If-pAX"/>
+                    <connections>
+                        <outlet property="eastSideCardImageView" destination="dNd-U0-Dzf" id="ezm-11-4ah"/>
+                        <outlet property="eastSidePlayerName" destination="Nvb-q5-izS" id="gDw-Ys-22G"/>
+                        <outlet property="eastSideScore" destination="LKY-ck-eF3" id="G8B-mL-0OV"/>
+                        <outlet property="timerLabel" destination="KJH-ob-NJv" id="GvH-u5-Gza"/>
+                        <outlet property="westSideCardImageView" destination="Gte-zq-IuV" id="eSf-gg-Zxa"/>
+                        <outlet property="westSidePlayerName" destination="cst-qf-ING" id="EIX-Gu-Zr3"/>
+                        <outlet property="westSideScore" destination="BJ9-Yj-6U1" id="Gh3-9Q-Rad"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
