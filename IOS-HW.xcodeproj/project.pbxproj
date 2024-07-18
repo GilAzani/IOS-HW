@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		FC117D842C47F8D600D0063C /* GlobeSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC117D832C47F8D600D0063C /* GlobeSide.swift */; };
 		FC117D862C48017900D0063C /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC117D852C48017900D0063C /* UserData.swift */; };
+		FC2F71BE2C490CB2007F537A /* WinnerScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2F71BD2C490CB2007F537A /* WinnerScreenController.swift */; };
 		FC47EE552C46C9A5005C50C7 /* MenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC47EE542C46C9A5005C50C7 /* MenuController.swift */; };
 		FCC707C02C2C5E5100F3E42B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC707BF2C2C5E5100F3E42B /* AppDelegate.swift */; };
 		FCC707C22C2C5E5100F3E42B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCC707C12C2C5E5100F3E42B /* SceneDelegate.swift */; };
@@ -38,6 +39,7 @@
 /* Begin PBXFileReference section */
 		FC117D832C47F8D600D0063C /* GlobeSide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobeSide.swift; sourceTree = "<group>"; };
 		FC117D852C48017900D0063C /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		FC2F71BD2C490CB2007F537A /* WinnerScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinnerScreenController.swift; sourceTree = "<group>"; };
 		FC47EE542C46C9A5005C50C7 /* MenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuController.swift; sourceTree = "<group>"; };
 		FCC707BC2C2C5E5000F3E42B /* IOS-HW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "IOS-HW.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCC707BF2C2C5E5100F3E42B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		FCC707BE2C2C5E5000F3E42B /* IOS-HW */ = {
 			isa = PBXGroup;
 			children = (
+				FC2F71BD2C490CB2007F537A /* WinnerScreenController.swift */,
 				FC117D852C48017900D0063C /* UserData.swift */,
 				FC117D832C47F8D600D0063C /* GlobeSide.swift */,
 				FCC707BF2C2C5E5100F3E42B /* AppDelegate.swift */,
@@ -247,6 +250,7 @@
 				FC47EE552C46C9A5005C50C7 /* MenuController.swift in Sources */,
 				FCC707C42C2C5E5100F3E42B /* GameController.swift in Sources */,
 				FCC707C02C2C5E5100F3E42B /* AppDelegate.swift in Sources */,
+				FC2F71BE2C490CB2007F537A /* WinnerScreenController.swift in Sources */,
 				FCC707C22C2C5E5100F3E42B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

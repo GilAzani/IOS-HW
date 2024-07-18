@@ -19,11 +19,11 @@ class MenuController: UIViewController{
     @IBOutlet weak var locationErromLabel: UILabel!
     @IBOutlet weak var startGameButton: UIButton!
     
-    private var isSetName = false
+    var isSetName = false
     private var isSetLocation = false
-    private let middlePosition = 34.817549168324334
+    let middlePosition = 34.817549168324334
     private var userLocation = GlobeSide.West // default location
-    private var userName = "user" // default userName
+    var userName = "user" // default userName
     
     private var locationManager: CLLocationManager!
     
@@ -31,9 +31,12 @@ class MenuController: UIViewController{
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        
         setUpUi()
         
         setUpLocationManagerAndGetLocation()
+        
+        checkStartConditions() // for second time loading
     }
     
     func setUpLocationManagerAndGetLocation(){
@@ -62,6 +65,11 @@ class MenuController: UIViewController{
         westOrEastLabel.isHidden = true
         startGameButton.isHidden = true
         locationErromLabel.isHidden = true
+        
+        //for second time in menu
+        if isSetName{
+            nameEntered(name: userName)
+        }
     }
     
     func nameEntered(name: String){

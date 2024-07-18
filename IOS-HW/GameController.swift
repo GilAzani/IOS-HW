@@ -9,6 +9,8 @@ import UIKit
 
 class GameController: UIViewController {
     
+    @IBOutlet weak var TimerTitleLabel: UILabel!
+    @IBOutlet weak var goToMainMenuButton: UIButton!
     @IBOutlet weak var eastSideScore: UILabel!
     @IBOutlet weak var westSideScore: UILabel!
     @IBOutlet weak var eastSidePlayerName: UILabel!
@@ -29,6 +31,9 @@ class GameController: UIViewController {
     private var roundNumber = 0
     private var tick = 5
     private let numberOfRounds = 10
+    
+    var winnerName: String!
+    var winnerScore: Int!
 
     
 
@@ -63,27 +68,54 @@ class GameController: UIViewController {
         timerLabel.text = "\(tick)"
     }
     
+    func isUserWon() -> Bool{
+        if userScore >= pcScore{
+            return true
+        }
+        return false
+    }
+    
     func startRound(t: Timer){
         if roundNumber >= numberOfRounds{
             endGame()
         }
-        handleCardSelected(westIndex: Int.random(in: 0..<13), eastIndex: Int.random(in: 0..<13))
-        
-        setScores()
-        
-        roundNumber += 1
-        
-        showCardsTimer()
-                
+        else{
+            handleCardSelected(westIndex: Int.random(in: 0..<13), eastIndex: Int.random(in: 0..<13))
+            
+            setScores()
+            
+            roundNumber += 1
+            
+            showCardsTimer()
+        }
     }
     
-    func endGame(){
-        // TODO create end game screen
-        print("end")
+    func endGame() {
+        goToMainMenuButton.isHidden = false
+        if isUserWon(){
+            winnerName = userData.userName
+            winnerScore = userScore
+        }else{
+            winnerName = "PC"
+            winnerScore = pcScore
+        }
+        timerLabel.isHidden = true
+        TimerTitleLabel.text = "Game Ended"
     }
+
+
     
     func showCardsTimer(){
         Timer.scheduledTimer(withTimeInterval: 3, repeats: false, block: timerTick(t:))
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToWinner"{
+            let winnerController = segue.destination as! WinnerScreenController
+            winnerController.userDetails = userData
+            winnerController.winnerName = winnerName
+            winnerController.winnerScore = winnerScore
+        }
     }
 
     
@@ -117,6 +149,7 @@ class GameController: UIViewController {
     }
     
     func setStartScreen(){
+        goToMainMenuButton.isHidden = true
         setFaceDownCards()
         switch userData.globeSide{
         case GlobeSide.East:
